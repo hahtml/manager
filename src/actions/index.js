@@ -28,7 +28,7 @@ export const loginUser = ({ email, password }) => {
 };
 
 const loginUserFail = (dispatch) => {
-    dispatch({ tpye: LOGIN_USER_FAIL })
+    dispatch({ type: LOGIN_USER_FAIL })
 }
 
 const loginUserSuccess = (dispatch, user) => {
