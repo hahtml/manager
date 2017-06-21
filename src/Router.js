@@ -9,8 +9,19 @@ const RouterComponent = () => {
                     <Scene key="login" component={LoginForm} title="Please Login" initial />
                 </Scene>
                 <Scene key="main">
-                    <Scene onRight={() => Actions.employeeCreate()} rightTitle="Add" key="employeeList" component={EmployeeList} title="Employees" />
-                    <Scene key="employeeCreate" component={EmployeeCreate} title="Create Employee" />
+                    <Scene
+                        onRight={() => Actions.employeeCreate()}
+                        rightTitle="Add"
+                        key="employeeList"
+                        component={EmployeeList}
+                        title="Employees"
+                        initial
+                    />
+                    <Scene
+                        key="employeeCreate"
+                        component={EmployeeCreate}
+                        title="Create Employee"
+                    />
                 </Scene>
             </Router>
         )
