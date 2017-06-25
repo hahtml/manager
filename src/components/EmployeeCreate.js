@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { employeeUpdate } from '../actions';
+
 import { Button, Card, CardSection, Input } from './';
 
 class EmployeeCreate extends Component {
@@ -30,4 +33,11 @@ class EmployeeCreate extends Component {
     }
 }
 
-export { EmployeeCreate };
+const mapStateToProps = state => {
+    return {
+        name: state.employeeForm.name,
+        phone: state.employeeForm.phone,
+    }
+}
+
+export default connect(null, { employeeUpdate })( EmployeeCreate );
