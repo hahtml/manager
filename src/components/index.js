@@ -5,4 +5,4 @@ export * from './Input';
 export * from './Button';
 export * from './Spinner';
 export * from './EmployeeList';
-export * from './EmployeeCreate';
+export {default as EmployeeCreate} from './EmployeeCreate';
